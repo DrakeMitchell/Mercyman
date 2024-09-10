@@ -28,4 +28,3 @@ func ripInfo(Area):
 func _on_main_send_enemy_info(Area):
 	EnemyNode = Area
 	ripInfo(Area)
-

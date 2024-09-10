@@ -1,24 +1,23 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1725938385
-icon.svg::CompressedTexture2D::3445364436140914849::1723047901::1723047919::1::::<><>::
-README.md::TextFile::-1::1725938302::0::1::::<><>::
-::res://Assets/::1725938343
-Skeleton_01_White_Idle.png::CompressedTexture2D::1690370723750299128::1725822433::1725822434::1::::<><>::
-Untitled.png::CompressedTexture2D::1956746005194241743::1725912348::1725912381::1::::<><>::
-vecteezy_exclamation-marks-icon-design-element-logo-element_5439438-1.jpg::CompressedTexture2D::6300449964817184177::1723237364::1723237607::1::::<><>::
-vecteezy_pixel-speech-bubbles-vector-isolated_30797531.jpg::CompressedTexture2D::5384601079528852176::1723237513::1723237610::1::::<><>::
-::res://Scenes/::1725938343
-Battle Scene.tscn::PackedScene::1133342593372401638::1725937249::0::1::::<><>::res://Scripts/Main.gd<>res://Scripts/SpawnPoint.gd<>res://Scripts/DialogPopup.gd<>uid://yc3fnvug6xwy::::res://Assets/Skeleton_01_White_Idle.png<>uid://244k54tformt::::res://Assets/Untitled.png<>res://Scripts/BattleMode.gd
-Dialog_Popup.tscn::PackedScene::5354379572515168864::1725937027::0::1::::<><>::
-Interact Area.tscn::PackedScene::3734870630468083198::1725937026::0::1::::<><>::res://Scripts/Interact Area.gd
-Main.tscn::PackedScene::7917408350775943864::1725937026::0::1::::<><>::res://Scripts/Main.gd<>uid://dk0f80fhwyrqf::::res://Scenes/Player.tscn<>res://Scripts/EnemyInfo.gd<>uid://bthg1kkccswje::::res://Scenes/Interact Area.tscn<>uid://cv08qw6g6jc06::::res://Assets/vecteezy_exclamation-marks-icon-design-element-logo-element_5439438-1.jpg<>uid://ciylufun4eotc::::res://Assets/vecteezy_pixel-speech-bubbles-vector-isolated_30797531.jpg<>res://Scripts/DialogPopup.gd<>uid://yc3fnvug6xwy::::res://Assets/Skeleton_01_White_Idle.png
-Player.tscn::PackedScene::7913123768630001833::1725937026::0::1::::<><>::res://Scripts/Player.gd<>uid://cijx3405lerci::::res://Scenes/Dialog_Popup.tscn
-::res://Scripts/::1725938343
-BattleMode.gd::GDScript::-1::1725937249::0::1::::<>Node<>::
-DialogPopup.gd::GDScript::-1::1725936749::0::1::::<>Sprite2D<>::
-EnemyInfo.gd::GDScript::-1::1725936176::0::1::::<>Node<>::
-Interact Area.gd::GDScript::-1::1725936850::0::1::::<>Node<>::
-Main.gd::GDScript::-1::1725936850::0::1::::<>Node2D<>::
-Player.gd::GDScript::-1::1725936196::0::1::::Player<>CharacterBody2D<>::
-SpawnPoint.gd::GDScript::-1::1725936963::0::1::::<>Node<>::
-::res://Sounds/::1723047967
+::res://::1725998360
+icon.svg::CompressedTexture2D::3445364436140914849::1725998294::1725998361::1::::<><>::
+README.md::TextFile::-1::1725998294::0::1::::<><>::
+::res://Assets/::1725998294
+Skeleton_01_White_Idle.png::CompressedTexture2D::1690370723750299128::1725998294::1725998361::1::::<><>::
+Untitled.png::CompressedTexture2D::1956746005194241743::1725998294::1725998361::1::::<><>::
+vecteezy_exclamation-marks-icon-design-element-logo-element_5439438-1.jpg::CompressedTexture2D::6300449964817184177::1725998294::1725998361::1::::<><>::
+vecteezy_pixel-speech-bubbles-vector-isolated_30797531.jpg::CompressedTexture2D::5384601079528852176::1725998294::1725998361::1::::<><>::
+::res://Scenes/::1725998294
+Battle Scene.tscn::PackedScene::1133342593372401638::1725998294::0::1::::<><>::res://Scripts/Main.gd<>res://Scripts/SpawnPoint.gd<>res://Scripts/DialogPopup.gd<>uid://yc3fnvug6xwy::::res://Assets/Skeleton_01_White_Idle.png<>uid://244k54tformt::::res://Assets/Untitled.png<>res://Scripts/BattleMode.gd
+Dialog_Popup.tscn::PackedScene::5354379572515168864::1725998294::0::1::::<><>::
+Interact Area.tscn::PackedScene::3734870630468083198::1725998294::0::1::::<><>::res://Scripts/Interact Area.gd
+Main.tscn::PackedScene::7917408350775943864::1725998294::0::1::::<><>::res://Scripts/Main.gd<>uid://dk0f80fhwyrqf::::res://Scenes/Player.tscn<>res://Scripts/EnemyInfo.gd<>uid://bthg1kkccswje::::res://Scenes/Interact Area.tscn<>uid://cv08qw6g6jc06::::res://Assets/vecteezy_exclamation-marks-icon-design-element-logo-element_5439438-1.jpg<>uid://ciylufun4eotc::::res://Assets/vecteezy_pixel-speech-bubbles-vector-isolated_30797531.jpg<>res://Scripts/DialogPopup.gd<>uid://yc3fnvug6xwy::::res://Assets/Skeleton_01_White_Idle.png
+Player.tscn::PackedScene::7913123768630001833::1725998294::0::1::::<><>::res://Scripts/Player.gd<>uid://cijx3405lerci::::res://Scenes/Dialog_Popup.tscn
+::res://Scripts/::1725998294
+BattleMode.gd::GDScript::-1::1725998294::0::1::::<>Node<>::
+DialogPopup.gd::GDScript::-1::1725998294::0::1::::<>Sprite2D<>::
+EnemyInfo.gd::GDScript::-1::1725998294::0::1::::<>Node<>::
+Interact Area.gd::GDScript::-1::1725998294::0::1::::<>Node<>::
+Main.gd::GDScript::-1::1725998294::0::1::::<>Node2D<>::
+Player.gd::GDScript::-1::1725998294::0::1::::Player<>CharacterBody2D<>::
+SpawnPoint.gd::GDScript::-1::1725998294::0::1::::<>Node<>::
