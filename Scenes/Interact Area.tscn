@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bthg1kkccswje"]
+
+[ext_resource type="Script" path="res://Scripts/Interact Area.gd" id="1_xonft"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k8wda"]
+size = Vector2(78, 75)
+
+[node name="InteractArea" type="Area2D"]
+script = ExtResource("1_xonft")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="Interactable" type="Sprite2D" parent="RigidBody2D"]
+
+[node name="Interact Shape" type="CollisionShape2D" parent="."]
+position = Vector2(316, 278)
+shape = SubResource("RectangleShape2D_k8wda")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=3 uid="uid://dk2is87wpjhxw"]
+
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_1v77t"]
+[ext_resource type="PackedScene" uid="uid://dk0f80fhwyrqf" path="res://Scenes/Player.tscn" id="1_lwok1"]
+[ext_resource type="Script" path="res://Scripts/EnemyInfo.gd" id="2_sr312"]
+[ext_resource type="PackedScene" uid="uid://bthg1kkccswje" path="res://Scenes/Interact Area.tscn" id="2_w25ge"]
+[ext_resource type="Texture2D" uid="uid://cv08qw6g6jc06" path="res://Assets/vecteezy_exclamation-marks-icon-design-element-logo-element_5439438-1.jpg" id="4_ghlg3"]
+[ext_resource type="Texture2D" uid="uid://ciylufun4eotc" path="res://Assets/vecteezy_pixel-speech-bubbles-vector-isolated_30797531.jpg" id="4_u4khp"]
+[ext_resource type="Script" path="res://Scripts/DialogPopup.gd" id="5_bq8x2"]
+[ext_resource type="Texture2D" uid="uid://yc3fnvug6xwy" path="res://Assets/Skeleton_01_White_Idle.png" id="8_egka1"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_1v77t")
+
+[node name="EnemyInfo" type="Node" parent="."]
+script = ExtResource("2_sr312")
+
+[node name="Player" parent="." instance=ExtResource("1_lwok1")]
+
+[node name="Indicator" type="Sprite2D" parent="Player"]
+visible = false
+position = Vector2(1000, 497)
+scale = Vector2(0.05, 0.064)
+texture = ExtResource("4_ghlg3")
+
+[node name="DialogPopupMain" type="Sprite2D" parent="Player"]
+visible = false
+position = Vector2(627, 512)
+scale = Vector2(0.173958, 0.105795)
+texture = ExtResource("4_u4khp")
+script = ExtResource("5_bq8x2")
+
+[node name="Door Interactions" type="Node" parent="."]
+
+[node name="InteractArea" parent="Door Interactions" instance=ExtResource("2_w25ge")]
+Type = "Door"
+
+[node name="Label" type="Label" parent="Door Interactions"]
+offset_left = 294.0
+offset_top = 265.0
+offset_right = 334.0
+offset_bottom = 288.0
+text = "Door"
+
+[node name="Item Interactions" type="Node" parent="."]
+
+[node name="InteractArea2" parent="Item Interactions" instance=ExtResource("2_w25ge")]
+position = Vector2(146, -221)
+Type = "Item"
+
+[node name="Label" type="Label" parent="Item Interactions"]
+offset_left = 440.0
+offset_top = 42.0
+offset_right = 480.0
+offset_bottom = 65.0
+text = "Item"
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="InteractArea" parent="Enemies" instance=ExtResource("2_w25ge")]
+position = Vector2(-456, -183)
+Enemy = true
+Amount = 2
+
+[node name="Label" type="Label" parent="Enemies"]
+offset_left = -167.0
+offset_top = 81.0
+offset_right = -114.0
+offset_bottom = 104.0
+text = "Zombie"
+
+[node name="InteractArea2" parent="Enemies" instance=ExtResource("2_w25ge")]
+position = Vector2(-552, -352)
+Type = "Skeleton"
+Enemy = true
+Amount = 2
+Class = "Hard"
+
+[node name="Label" type="Label" parent="Enemies/InteractArea2"]
+offset_left = 285.0
+offset_top = 267.0
+offset_right = 353.0
+offset_bottom = 290.0
+text = "Skeleton"
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemies/InteractArea2"]
+position = Vector2(316, 278)
+scale = Vector2(0.851648, 0.921875)
+texture = ExtResource("8_egka1")
+
+[connection signal="ActivatePopup" from="." to="Player/DialogPopupMain" method="_on_main_activate_popup"]
+[connection signal="SendEnemyInfo" from="." to="EnemyInfo" method="_on_main_send_enemy_info"]
+[connection signal="Interact_Hit" from="Door Interactions/InteractArea" to="." method="_on_interact_area_interact_hit"]
+[connection signal="Interact_Leave" from="Door Interactions/InteractArea" to="." method="_on_interact_area_interact_leave"]
+[connection signal="body_exited" from="Door Interactions/InteractArea" to="Door Interactions/InteractArea" method="_on_body_exited"]
+[connection signal="Interact_Hit" from="Item Interactions/InteractArea2" to="." method="_on_interact_area_interact_hit"]
+[connection signal="Interact_Leave" from="Item Interactions/InteractArea2" to="." method="_on_interact_area_interact_leave"]
+[connection signal="body_exited" from="Item Interactions/InteractArea2" to="Item Interactions/InteractArea2" method="_on_body_exited"]
+[connection signal="Interact_Hit" from="Enemies/InteractArea" to="." method="_on_interact_area_interact_hit"]
+[connection signal="Interact_Leave" from="Enemies/InteractArea" to="." method="_on_interact_area_interact_leave"]
+[connection signal="body_exited" from="Enemies/InteractArea" to="Enemies/InteractArea" method="_on_body_exited"]
+[connection signal="Interact_Hit" from="Enemies/InteractArea2" to="." method="_on_interact_area_interact_hit"]
+[connection signal="Interact_Leave" from="Enemies/InteractArea2" to="." method="_on_interact_area_interact_leave"]
+[connection signal="body_exited" from="Enemies/InteractArea2" to="Enemies/InteractArea2" method="_on_body_exited"]

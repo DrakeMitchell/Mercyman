@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dk2is87wpjhxw"]
+
+[ext_resource type="Script" path="res://Scenes/Main.gd" id="1_1v77t"]
+[ext_resource type="PackedScene" uid="uid://dk0f80fhwyrqf" path="res://Scenes/Player.tscn" id="1_lwok1"]
+[ext_resource type="PackedScene" uid="uid://bthg1kkccswje" path="res://Scenes/Interact Area.tscn" id="2_w25ge"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_scntl"]
+radius = 74.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_owj2r"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_1v77t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(154, 103)
+shape = SubResource("CircleShape2D_scntl")
+
+[node name="Player" parent="." instance=ExtResource("1_lwok1")]
+
+[node name="InteractArea" parent="." instance=ExtResource("2_w25ge")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1000, 500)
+scale = Vector2(3, 3)
+shape = SubResource("CapsuleShape2D_owj2r")
+
+[connection signal="Interact_Hit" from="InteractArea" to="." method="_on_interact_area_interact_hit"]
+[connection signal="Interact_Leave" from="InteractArea" to="." method="_on_interact_area_interact_leave"]
+[connection signal="body_exited" from="InteractArea" to="InteractArea" method="_on_body_exited"]

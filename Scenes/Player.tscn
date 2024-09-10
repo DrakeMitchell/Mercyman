@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk0f80fhwyrqf"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_s80s3"]
+[ext_resource type="PackedScene" uid="uid://cijx3405lerci" path="res://Scenes/Dialog_Popup.tscn" id="2_3rljd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7yoga"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_s80s3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7yoga")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="DialogPopup" parent="." instance=ExtResource("2_3rljd")]
+visible = false
+
+[node name="Camera2D" type="Camera2D" parent="."]

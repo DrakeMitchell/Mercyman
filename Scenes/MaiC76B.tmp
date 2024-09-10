@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://dk2is87wpjhxw"]
+
+[ext_resource type="Script" path="res://Scenes/Main.gd" id="1_1v77t"]
+[ext_resource type="PackedScene" uid="uid://dk0f80fhwyrqf" path="res://Scenes/Player.tscn" id="1_lwok1"]
+[ext_resource type="PackedScene" uid="uid://bthg1kkccswje" path="res://Scenes/Interact Area.tscn" id="2_w25ge"]
+[ext_resource type="Texture2D" uid="uid://cv08qw6g6jc06" path="res://Assets/vecteezy_exclamation-marks-icon-design-element-logo-element_5439438-1.jpg" id="4_ghlg3"]
+[ext_resource type="Texture2D" uid="uid://ciylufun4eotc" path="res://Assets/vecteezy_pixel-speech-bubbles-vector-isolated_30797531.jpg" id="4_u4khp"]
+[ext_resource type="Script" path="res://Scenes/DialogPopup.gd" id="5_bq8x2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_scntl"]
+radius = 74.0
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_1v77t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(154, 103)
+shape = SubResource("CircleShape2D_scntl")
+
+[node name="Player" parent="." instance=ExtResource("1_lwok1")]
+
+[node name="Indicator" type="Sprite2D" parent="Player"]
+visible = false
+position = Vector2(1000, 497)
+scale = Vector2(0.05, 0.064)
+texture = ExtResource("4_ghlg3")
+
+[node name="DialogPopupMain" type="Sprite2D" parent="Player"]
+visible = false
+position = Vector2(627, 512)
+scale = Vector2(0.173958, 0.105795)
+texture = ExtResource("4_u4khp")
+script = ExtResource("5_bq8x2")
+
+[node name="InteractArea" parent="." instance=ExtResource("2_w25ge")]
+
+[connection signal="ActivatePopup" from="." to="Player/DialogPopupMain" method="_on_main_activate_popup"]
+[connection signal="Interact_Hit" from="InteractArea" to="." method="_on_interact_area_interact_hit"]
+[connection signal="Interact_Leave" from="InteractArea" to="." method="_on_interact_area_interact_leave"]
+[connection signal="body_exited" from="InteractArea" to="InteractArea" method="_on_body_exited"]
