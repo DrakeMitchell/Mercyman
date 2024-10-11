@@ -1,15 +1,21 @@
-# Resident Evil Gaiden
- A made from scratch attempt to replicate the gameplay of RE Gaiden for the GBC
+# Mercyman ☂️
+## A made from scratch attempt to replicate the gameplay of RE Gaiden for the GBC
 
- Current Progress and Goals:
+- **Current Progress and Goals:**
+  My goal for this project is to create a small demo to showcase a full framework based on the gameplay of Resident Evil Gaiden for the game boy color.
+  I will attempting to recreate a lot of the functions in the Godot game engine following the top down 2D style.
+  I will also be creating a number of new features to improve the game and contribute my own ideas
 
- Original Games Systems:
-  Recreate the top down interactions and indicator - Complete
-  Recreate the battle system - Complete/Still tweaking
-  Recreate zombie approaching during battle - No progress yet
-  Recreate inventory system - No progress yet
+- The Project will culminate in an short demo Rougelike mode showcasing the functionality.
 
-My Own Systems:
- Create flashlight effect - no progress
- Create various different enemies and weapons - no progress
- Create full demo scene - no progress
+- Original Games Systems:
+  - [x] 🗺️Recreate the top down interactions and indicator
+  - [x] 🔫Recreate the battle system - Still tweaking
+  - [ ] 🧟Recreate zombie approaching during battle 
+  - [ ] 👜Recreate inventory system 
+
+- My Own Systems:
+  - [ ] 🔦 Create flashlight effect - no progress 
+  - [ ] 💀Create various different enemies and weapons - no progress
+
+
