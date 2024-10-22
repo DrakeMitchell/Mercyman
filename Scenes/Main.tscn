@@ -16,6 +16,7 @@ script = ExtResource("1_1v77t")
 script = ExtResource("2_sr312")
 
 [node name="Player" parent="." instance=ExtResource("1_lwok1")]
+position = Vector2(4, 234)
 
 [node name="Indicator" type="Sprite2D" parent="Player"]
 visible = false
@@ -33,36 +34,39 @@ script = ExtResource("5_bq8x2")
 [node name="Door Interactions" type="Node" parent="."]
 
 [node name="InteractArea" parent="Door Interactions" instance=ExtResource("2_w25ge")]
+position = Vector2(-319, -668)
 Type = "Door"
 
 [node name="Label" type="Label" parent="Door Interactions"]
-offset_left = 294.0
-offset_top = 265.0
-offset_right = 334.0
-offset_bottom = 288.0
+offset_left = -25.0
+offset_top = -403.0
+offset_right = 15.0
+offset_bottom = -380.0
 text = "Door"
 
 [node name="Item Interactions" type="Node" parent="."]
 
 [node name="InteractArea2" parent="Item Interactions" instance=ExtResource("2_w25ge")]
-position = Vector2(146, -221)
+position = Vector2(-394, -161)
 Type = "Item"
 
 [node name="Label" type="Label" parent="Item Interactions"]
-offset_left = 440.0
-offset_top = 42.0
-offset_right = 480.0
-offset_bottom = 65.0
+offset_left = -100.0
+offset_top = 102.0
+offset_right = -60.0
+offset_bottom = 125.0
 text = "Item"
 
 [node name="Enemies" type="Node" parent="."]
 
 [node name="InteractArea" parent="Enemies" instance=ExtResource("2_w25ge")]
+visible = false
 position = Vector2(-456, -183)
 Enemy = true
 Amount = 2
 
 [node name="Label" type="Label" parent="Enemies"]
+visible = false
 offset_left = -167.0
 offset_top = 81.0
 offset_right = -114.0
@@ -70,7 +74,7 @@ offset_bottom = 104.0
 text = "Zombie"
 
 [node name="InteractArea2" parent="Enemies" instance=ExtResource("2_w25ge")]
-position = Vector2(-552, -352)
+position = Vector2(-311, -555)
 Type = "Skeleton"
 Enemy = true
 Amount = 2
