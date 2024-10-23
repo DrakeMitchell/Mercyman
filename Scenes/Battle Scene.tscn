@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://qe88s5jktwbu"]
+[gd_scene load_steps=9 format=3 uid="uid://qe88s5jktwbu"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_vveha"]
 [ext_resource type="Script" path="res://Scripts/SpawnPoint.gd" id="2_elr2i"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://yc3fnvug6xwy" path="res://Assets/Skeleton_01_White_Idle.png" id="2_kte72"]
 [ext_resource type="Texture2D" uid="uid://244k54tformt" path="res://Assets/Untitled.png" id="6_edvi2"]
 [ext_resource type="Script" path="res://Scripts/BattleMode.gd" id="6_t5xa3"]
+[ext_resource type="PackedScene" uid="uid://u7bmv8uc1d5t" path="res://Scenes/BattleHUD.tscn" id="7_6j3fl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fi2gj"]
 size = Vector2(51, 44)
@@ -14,7 +15,7 @@ size = Vector2(51, 44)
 script = ExtResource("1_vveha")
 
 [node name="Indication" type="Sprite2D" parent="."]
-position = Vector2(452, 112)
+position = Vector2(-75.9999, 92)
 scale = Vector2(0.290179, 0.632076)
 texture = ExtResource("6_edvi2")
 
@@ -90,6 +91,8 @@ script = ExtResource("6_t5xa3")
 FireButton1 = NodePath("../Button3")
 FireButton2 = NodePath("../Button")
 FireButton3 = NodePath("../Button2")
+
+[node name="BattleHud" parent="." instance=ExtResource("7_6j3fl")]
 
 [connection signal="Battlemode" from="." to="BattleMode" method="_on_battle_scene_battlemode"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

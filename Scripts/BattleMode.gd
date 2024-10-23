@@ -10,7 +10,7 @@ var StartPos
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	StartPos = Vector2(100,100)
+	StartPos = Vector2(-100,100)
 	CurrentPos = StartPos 
 	FireButton1.hide()
 	FireButton2.hide()
@@ -20,12 +20,11 @@ func _ready():
 
 #Tracks the indicators position and handles the 'X' action
 func _process(delta):
-	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 	
 	$"../Indication".position = CurrentPos + Vector2(10,0)
 	CurrentPos = $"../Indication".position
 	if(CurrentPos.x > 700):
-		CurrentPos = Vector2(0,100)
+		CurrentPos = Vector2(-100,100)
 		$"../Indication".position = CurrentPos
 		
 	if(Input.is_action_just_pressed("click_button")):

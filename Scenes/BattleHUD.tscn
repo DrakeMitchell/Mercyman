@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://u7bmv8uc1d5t"]
+
+[ext_resource type="Texture2D" uid="uid://bqg275m320e7f" path="res://Scenes/Test Hud.png" id="1_xtxr2"]
+
+[node name="BattleHud" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_top = 0.66
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.319977
+offset_bottom = -4.0
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.666
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.05176e-05
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.499
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -108.0
+offset_bottom = -0.144028
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_xtxr2")
+
+[node name="Button" type="Button" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.852
+anchor_right = 0.967
+anchor_bottom = 0.5
+offset_left = 0.495911
+offset_top = -7.85596
+offset_right = 0.0158691
+offset_bottom = 10.072
+text = "Run Away!"

@@ -22,8 +22,7 @@ var InBattleScene = EnemyInfo.getInBattleScene()
 
 func _ready():
 	set_process_input(true)
-	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
-	Input.set_custom_mouse_cursor(cursor)
+
 	# Replace with function body.
 
 
