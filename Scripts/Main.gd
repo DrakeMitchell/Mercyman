@@ -60,7 +60,7 @@ func Popup():
 
 #Enables indicator and sets appropriate interaction variables for the Popup
 func _on_interact_area_interact_hit(Area):
-	$Player/Indicator.show()
+	$Player/Camera2D/Indicator.show()
 	print_debug(Area.Type)
 	if Area.Enemy == false:
 		if Area.Type == "Door":
@@ -83,6 +83,6 @@ func change_the_scene():
 
 #Disables interaction and the indicators
 func _on_interact_area_interact_leave():
-	$Player/Indicator.hide()
-	$Player/DialogPopupMain.hide()
+	$Player/Camera2D/Indicator.hide()
+	$Player/Camera2D/DialogPopupMain.hide()
 	Interacting = false 

@@ -15,5 +15,3 @@ shape = SubResource("CircleShape2D_7yoga")
 
 [node name="DialogPopup" parent="." instance=ExtResource("2_3rljd")]
 visible = false
-
-[node name="Camera2D" type="Camera2D" parent="."]
