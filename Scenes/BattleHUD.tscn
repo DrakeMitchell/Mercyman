@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://u7bmv8uc1d5t"]
+[gd_scene load_steps=7 format=3 uid="uid://u7bmv8uc1d5t"]
 
+[ext_resource type="Script" path="res://Scenes/BattleHud.gd" id="1_giasc"]
 [ext_resource type="Texture2D" uid="uid://bqg275m320e7f" path="res://Scenes/Test Hud.png" id="1_xtxr2"]
+[ext_resource type="Texture2D" uid="uid://ciylufun4eotc" path="res://Assets/vecteezy_pixel-speech-bubbles-vector-isolated_30797531.jpg" id="2_qyikl"]
+[ext_resource type="Texture2D" uid="uid://cv08qw6g6jc06" path="res://Assets/vecteezy_exclamation-marks-icon-design-element-logo-element_5439438-1.jpg" id="3_21mrh"]
+[ext_resource type="Texture2D" uid="uid://bpc7wcd682bxh" path="res://icon.svg" id="4_kut07"]
+[ext_resource type="Script" path="res://Scenes/Gun_Option_Button.gd" id="6_rg2bf"]
 
 [node name="BattleHud" type="CanvasLayer"]
+script = ExtResource("1_giasc")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -34,7 +40,7 @@ grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("1_xtxr2")
 
-[node name="Button" type="Button" parent="Control/Panel"]
+[node name="RunAway" type="Button" parent="Control/Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.852
@@ -45,3 +51,45 @@ offset_top = -7.85596
 offset_right = 0.0158691
 offset_bottom = 10.072
 text = "Run Away!"
+
+[node name="ActiveGun" type="TextureButton" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 321.0
+offset_top = -126.0
+offset_right = 484.0
+offset_bottom = 31.0
+scale = Vector2(0.0615979, 0.06)
+toggle_mode = true
+texture_normal = ExtResource("2_qyikl")
+texture_pressed = ExtResource("3_21mrh")
+
+[node name="MenuButton" type="MenuButton" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 335.0
+offset_top = -0.855957
+offset_right = 2263.0
+offset_bottom = 1927.14
+scale = Vector2(0.0509013, 0.0353748)
+keep_pressed_outside = true
+icon = ExtResource("3_21mrh")
+item_count = 2
+popup/item_0/text = "Gun 1"
+popup/item_1/text = "Gun 2"
+popup/item_1/id = 1
+
+[node name="PopupPanel" type="PopupPanel" parent="Control/Panel"]
+position = Vector2i(320, 275)
+size = Vector2i(136, 136)
+
+[node name="TextureButton" type="TextureButton" parent="Control/Panel/PopupPanel"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 132.0
+offset_bottom = 132.0
+texture_normal = ExtResource("4_kut07")
+script = ExtResource("6_rg2bf")
+guns = 2
+
+[connection signal="pressed" from="Control/Panel/RunAway" to="." method="_on_run_away_pressed"]
+[connection signal="pressed" from="Control/Panel/ActiveGun" to="." method="_on_Gun_Select_Button_pressed"]
+[connection signal="pressed" from="Control/Panel/PopupPanel/TextureButton" to="." method="_on_Gun_Option_One_pressed"]

@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ciylufun4eotc" path="res://Assets/vecteezy_pixel-speech-bubbles-vector-isolated_30797531.jpg" id="4_u4khp"]
 [ext_resource type="Script" path="res://Scripts/DialogPopup.gd" id="5_bq8x2"]
 [ext_resource type="Texture2D" uid="uid://yc3fnvug6xwy" path="res://Assets/Skeleton_01_White_Idle.png" id="8_egka1"]
-[ext_resource type="Script" path="res://Scenes/RoomCamera.gd" id="9_a0g56"]
+[ext_resource type="Script" path="res://Scripts/RoomCamera.gd" id="9_a0g56"]
 [ext_resource type="Texture2D" uid="uid://b5sc1kya42kup" path="res://Assets/Tilesets/Tiles.png" id="10_r0jxo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oxofu"]
