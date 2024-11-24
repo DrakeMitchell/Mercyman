@@ -12,10 +12,14 @@
   - [x] 🗺️Recreate the top down interactions and indicator
   - [x] 🔫Recreate the battle system - Still tweaking
   - [ ] 🧟Recreate zombie approaching during battle 
-  - [ ] 👜Recreate inventory system 
+  - [ ] 👜Simple Gun and Healing item switch system
+- Stretch Goal
+  - [ ] 👜Create a proper RE inspired Inventory
 
 - My Own Systems:
   - [ ] 🔦 Create flashlight effect - no progress 
   - [ ] 💀Create various different enemies and weapons - no progress
+- Stretch Goal
+  - [ ] Come Up with some way to integrate a camera as a mechanic (Flash probably)
 
 
