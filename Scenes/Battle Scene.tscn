@@ -103,17 +103,20 @@ offset_right = 43.0
 offset_bottom = -58.0
 text = "Health: 00"
 
-[node name="SpawnControl" type="Node" parent="." node_paths=PackedStringArray("point1", "point2", "point3")]
+[node name="SpawnControl" type="Node" parent="." node_paths=PackedStringArray("point1", "point2", "point3", "SpawnPoints", "HealthLabel")]
 script = ExtResource("2_elr2i")
 point1 = NodePath("../CollisionShape2D")
 point2 = NodePath("../CollisionShape2D2")
 point3 = NodePath("../CollisionShape2D3")
+SpawnPoints = [NodePath("../CollisionShape2D"), NodePath("../CollisionShape2D2"), NodePath("../CollisionShape2D3")]
+HealthLabel = [NodePath("../CollisionShape2D/Label"), NodePath("../CollisionShape2D2/Label"), NodePath("../CollisionShape2D3/Label")]
 
-[node name="BattleMode" type="Node" parent="." node_paths=PackedStringArray("FireButton1", "FireButton2", "FireButton3")]
+[node name="BattleMode" type="Node" parent="." node_paths=PackedStringArray("FireButton1", "FireButton2", "FireButton3", "HealthLabel")]
 script = ExtResource("6_t5xa3")
 FireButton1 = NodePath("../Button3")
 FireButton2 = NodePath("../Button")
 FireButton3 = NodePath("../Button2")
+HealthLabel = [NodePath("../CollisionShape2D/Label"), NodePath("../CollisionShape2D2/Label"), NodePath("../CollisionShape2D3/Label")]
 
 [node name="BattleHud" parent="." instance=ExtResource("7_6j3fl")]
 

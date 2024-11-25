@@ -1,4 +1,5 @@
-extends Node
+extends Node 
+class_name BattleMode
 
 var CurrentPos
 var StartPos
@@ -7,6 +8,8 @@ var StartPos
 @export var FireButton1: Button
 @export var FireButton2: Button
 @export var FireButton3: Button
+
+@export var HealthLabel: Array[Label]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -56,11 +59,20 @@ func fire(pos) -> bool:
 		return false;
 
 	if(pos.x <= FireButton1.position.x+100 and pos.x >= FireButton1.position.x-100):
-		hit(1)
+		if EnemyInfo.Enemies.size() < 1:
+			return false
+		else:
+			hit(1)
 	elif(pos.x <= FireButton2.position.x+100 and pos.x >= FireButton2.position.x-100):
-		hit(2)
+		if EnemyInfo.Enemies.size() < 2:
+			return false
+		else:
+			hit(2)
 	elif(pos.x <= FireButton3.position.x+100 and pos.x >= FireButton3.position.x-100):
-		hit(3)
+		if EnemyInfo.Enemies.size() < 3:
+			return false
+		else:
+			hit(3)
 		
 	GunManager.GunAmmo[GunManager.currentEquipped] -= 1;
 	return true
@@ -68,15 +80,15 @@ func fire(pos) -> bool:
 		
 		
 func hit(num):
-	print_debug(EnemyInfo.Enemies[0].Health)
-	EnemyInfo.Enemies[0].changeHealth(-50)
+	EnemyInfo.Enemies[num-1].changeHealth(-50)
+	if(EnemyInfo.Enemies[num-1].Health <= 0):
+		kill(num)
 	
 	
 func updateHealth():
-		$"../CollisionShape2D/Label".text = "Health: " + str(EnemyInfo.Enemies[0].Health)
-		#$"../CollisionShape2D2/Label".text = "Health: " + str(EnemyInfo.Enemies[i].Health)
-		#$"../CollisionShape2D3/Label".text = "Health: " + str(EnemyInfo.Enemy.Health)
-	
+	for i in EnemyInfo.Enemies.size():
+		if(EnemyInfo.Enemies[i] != null):
+			HealthLabel[i].text = "Health: " + str(EnemyInfo.Enemies[i].Health)
 
 #Disables the enabled enemies
 func kill(num):

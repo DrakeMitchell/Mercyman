@@ -1,7 +1,7 @@
-extends Node
+extends BattleMode
 
 #Global Variable to store all the spawnpoints
-@export var SpawnPoints: int = 3
+
 @export var point1: CollisionShape2D = null
 @export var point2: CollisionShape2D = null
 @export var point3: CollisionShape2D = null
@@ -10,6 +10,8 @@ extends Node
 var Point1Used
 var Point2Used
 var Point3Used
+
+@export var SpawnPoints: Array[CollisionShape2D]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -31,35 +33,53 @@ func _process(delta):
 
 #Randomizes the amount of spawned enemies and locations, pretty poor design but functional
 func selectSpawnLocation():
-	var i = 0
-	var t = EnemyInfo.Type
-	while(t == "Skeleton" and i < EnemyInfo.Amount):
-		i = i + 1
-		var SpawnNum = randi_range(0,2)
-
-		if SpawnNum == 0:
-			Spawn(0,t)
-		elif SpawnNum == 1:
-			Spawn(1,t)
-		elif SpawnNum == 2:
-			Spawn(2,t)
-
-#Toggles the images for the spawned enemies
-func Spawn(n, t):
-	if(t == "Skeleton"):
-		if(n == 0):
-			Point1Used = true
-			point1.get_child(0).show()
-			EnemyInfo.SpawnEnemy()
-			$"../CollisionShape2D/Label".text = "Health: " + str(EnemyInfo.Enemies[0].Health)
-		elif(n == 1):
-			Point2Used = true
-			point2.get_child(0).show()
-			EnemyInfo.SpawnEnemy()
-		elif(n == 2):
-			Point3Used = true
-			point3.get_child(0).show()
+	var amount = EnemyInfo.Amount
+	var t = EnemyInfo.Type	
+		#var SpawnNum = randi_range(0,2)
+		
+	
+	if amount == 1:
+		Spawn(1,t)
+	elif amount == 2:
+		Spawn(2,t)
+	elif amount== 3:
+		Spawn(3,t)
 			
 
+#Toggles the images for the spawned enemies
+
+#
+# This is completely awful and I need a better way to spawn them
+#
+#
+func Spawn(number, type):
+	if(type == "Skeleton"):
+		for i in number:
+			print_debug(i)
+			SpawnPoints[i].get_child(0).show()
+			EnemyInfo.SpawnEnemy()
+			HealthLabel[i].text = "Health: " + str(EnemyInfo.Enemies[i].Health)
+		
+		#if(number == 0):
+		#	point1.get_child(0).show()
+		#	EnemyInfo.SpawnEnemy()
+		#	$"../CollisionShape2D/Label".text = "Health: " + str(EnemyInfo.Enemies[0].Health)
+		#elif(number == 1):
+		#	point1.get_child(0).show()
+		#	point2.get_child(0).show()
+		#	EnemyInfo.SpawnEnemy()
+		#	EnemyInfo.SpawnEnemy()
+		#	$"../CollisionShape2D/Label".text = "Health: " + str(EnemyInfo.Enemies[0].Health)
+		#	$"../CollisionShape2D/Label".text = "Health: " + str(EnemyInfo.Enemies[1].Health)
+		#elif(number == 2):
+		#	point1.get_child(0).show()
+		#	point2.get_child(0).show()
+		#	point3.get_child(0).show()
+		#	EnemyInfo.SpawnEnemy()
+		#	EnemyInfo.SpawnEnemy()
+		#	EnemyInfo.SpawnEnemy()
+		#	$"../CollisionShape2D/Label".text = "Health: " + str(EnemyInfo.Enemies[0].Health)
+		#	$"../CollisionShape2D/Label".text = "Health: " + str(EnemyInfo.Enemies[1].Health)
+		#	$"../CollisionShape2D/Label".text = "Health: " + str(EnemyInfo.Enemies[2].Health)
 
 	

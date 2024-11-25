@@ -400,7 +400,7 @@ text = "Zombie"
 position = Vector2(262, -110)
 Type = "Skeleton"
 Enemy = true
-Amount = 2
+Amount = 3
 Class = "Hard"
 
 [node name="Label" type="Label" parent="Enemies/InteractArea2"]

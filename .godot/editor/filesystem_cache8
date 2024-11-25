@@ -1,36 +1,36 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1732474502
-ExclamationTex2D.tres::CompressedTexture2D::8405315069775506664::1732166316::0::1::::<><>::
-icon.svg::CompressedTexture2D::3445364436140914849::1723044301::1732157369::1::::<><>::
-README.md::TextFile::-1::1729567260::0::1::::<><>::
-::res://Assets/::1732157369
-resident_evil_3_remake_font_by_snakeyboy_ddovswe.otf::FontFile::840243683873758822::1729559971::1732157369::1::::<><>::
-Skeleton_01_White_Idle.png::CompressedTexture2D::1690370723750299128::1725818833::1732157369::1::::<><>::
-Untitled.png::CompressedTexture2D::1956746005194241743::1725908748::1732157369::1::::<><>::
-vecteezy_exclamation-marks-icon-design-element-logo-element_5439438-1.jpg::CompressedTexture2D::6300449964817184177::1723233764::1732157369::1::::<><>::
-vecteezy_pixel-speech-bubbles-vector-isolated_30797531.jpg::CompressedTexture2D::5384601079528852176::1723233913::1732157369::1::::<><>::
-::res://Assets/Tilesets/::1732157369
-Tiles.png::CompressedTexture2D::4529413219382843399::1730253862::1732157369::1::::<><>::
-::res://Scenes/::1732167128
-Battle Scene.tscn::PackedScene::1133342593372401638::1732167099::0::1::::<><>::res://Scripts/Main.gd<>res://Scripts/SpawnPoint.gd<>res://Scripts/DialogPopup.gd<>uid://yc3fnvug6xwy::::res://Assets/Skeleton_01_White_Idle.png<>uid://244k54tformt::::res://Assets/Untitled.png<>res://Scripts/BattleMode.gd<>uid://u7bmv8uc1d5t::::res://Scenes/BattleHUD.tscn<>res://Scenes/gun_manager.gd<>uid://dr0uktyeckmjw::::res://ExclamationTex2D.tres
-BattleHud.gd::GDScript::-1::1732167069::0::1::::<>CanvasLayer<>::
-BattleHUD.tscn::PackedScene::1469920262291492043::1732167128::0::1::::<><>::res://Scenes/BattleHud.gd<>uid://bqg275m320e7f::::res://Scenes/Test Hud.png<>uid://ciylufun4eotc::::res://Assets/vecteezy_pixel-speech-bubbles-vector-isolated_30797531.jpg<>uid://cv08qw6g6jc06::::res://Assets/vecteezy_exclamation-marks-icon-design-element-logo-element_5439438-1.jpg<>uid://bpc7wcd682bxh::::res://icon.svg<>res://Scenes/Gun_Option_Button.gd
-Dialog_Popup.tscn::PackedScene::5354379572515168864::1732167099::0::1::::<><>::
-gun_manager.gd::GDScript::-1::1732167044::0::1::::<>Node<>::
-Gun_Option_Button.gd::GDScript::-1::1732165448::0::1::::<>TextureButton<>::
-Interact Area.tscn::PackedScene::3734870630468083198::1732167099::0::1::::<><>::res://Scripts/Interact Area.gd
-Main.tscn::PackedScene::7917408350775943864::1732167099::0::1::::<><>::res://Scripts/Main.gd<>uid://dk0f80fhwyrqf::::res://Scenes/Player.tscn<>res://Scripts/EnemyInfo.gd<>uid://bthg1kkccswje::::res://Scenes/Interact Area.tscn<>uid://cv08qw6g6jc06::::res://Assets/vecteezy_exclamation-marks-icon-design-element-logo-element_5439438-1.jpg<>uid://ciylufun4eotc::::res://Assets/vecteezy_pixel-speech-bubbles-vector-isolated_30797531.jpg<>res://Scripts/DialogPopup.gd<>uid://yc3fnvug6xwy::::res://Assets/Skeleton_01_White_Idle.png<>res://Scripts/RoomCamera.gd<>uid://b5sc1kya42kup::::res://Assets/Tilesets/Tiles.png
-Player.tscn::PackedScene::7913123768630001833::1732167099::0::1::::<><>::res://Scripts/Player.gd<>uid://cijx3405lerci::::res://Scenes/Dialog_Popup.tscn
-Start Menu.tscn::PackedScene::3998913462458484702::1732167100::0::1::::<><>::res://Scripts/start_menu.gd<>uid://l8axqp0wq5i5::::res://Assets/resident_evil_3_remake_font_by_snakeyboy_ddovswe.otf
-Test Hud.png::CompressedTexture2D::3523526548183047629::1730252627::1732157369::1::::<><>::
-::res://Scripts/::1732158559
-BattleMode.gd::GDScript::-1::1732157672::0::1::::<>Node<>::
-DialogPopup.gd::GDScript::-1::1725933149::0::1::::<>Sprite2D<>::
-EnemyInfo.gd::GDScript::-1::1728679040::0::1::::<>Node<>::
-Interact Area.gd::GDScript::-1::1725933250::0::1::::<>Node<>::
-Main.gd::GDScript::-1::1730254764::0::1::::<>Node2D<>::
-Player.gd::GDScript::-1::1725932596::0::1::::Player<>CharacterBody2D<>::
-RoomCamera.gd::GDScript::-1::1730254664::0::1::::<>Camera2D<>::
-SpawnPoint.gd::GDScript::-1::1732157672::0::1::::<>Node<>::
-start_menu.gd::GDScript::-1::1730252627::0::1::::<>Control<>::
-::res://Sounds/::1723044367
+::res://::1732554873
+ExclamationTex2D.tres::CompressedTexture2D::8405315069775506664::1732554850::0::1::::<><>::
+icon.svg::CompressedTexture2D::3445364436140914849::1725994694::1732554874::1::::<><>::
+README.md::TextFile::-1::1732554850::0::1::::<><>::
+::res://Assets/::1732554850
+resident_evil_3_remake_font_by_snakeyboy_ddovswe.otf::FontFile::840243683873758822::1729616919::1732554874::1::::<><>::
+Skeleton_01_White_Idle.png::CompressedTexture2D::1690370723750299128::1725994694::1732554874::1::::<><>::
+Untitled.png::CompressedTexture2D::1956746005194241743::1725994694::1732554874::1::::<><>::
+vecteezy_exclamation-marks-icon-design-element-logo-element_5439438-1.jpg::CompressedTexture2D::6300449964817184177::1725994694::1732554874::1::::<><>::
+vecteezy_pixel-speech-bubbles-vector-isolated_30797531.jpg::CompressedTexture2D::5384601079528852176::1725994694::1732554874::1::::<><>::
+::res://Assets/Tilesets/::1732554850
+Tiles.png::CompressedTexture2D::4529413219382843399::1732554850::1732554874::1::::<><>::
+::res://Scenes/::1732554850
+Battle Scene.tscn::PackedScene::1133342593372401638::1732554850::0::1::::<><>::res://Scripts/Main.gd<>res://Scripts/SpawnPoint.gd<>res://Scripts/DialogPopup.gd<>uid://yc3fnvug6xwy::::res://Assets/Skeleton_01_White_Idle.png<>uid://244k54tformt::::res://Assets/Untitled.png<>res://Scripts/BattleMode.gd<>uid://u7bmv8uc1d5t::::res://Scenes/BattleHUD.tscn<>res://Scenes/gun_manager.gd<>uid://dr0uktyeckmjw::::res://ExclamationTex2D.tres
+BattleHud.gd::GDScript::-1::1732554850::0::1::::<>CanvasLayer<>::
+BattleHUD.tscn::PackedScene::1469920262291492043::1732554850::0::1::::<><>::res://Scenes/BattleHud.gd<>uid://bqg275m320e7f::::res://Scenes/Test Hud.png<>uid://ciylufun4eotc::::res://Assets/vecteezy_pixel-speech-bubbles-vector-isolated_30797531.jpg<>uid://bpc7wcd682bxh::::res://icon.svg<>res://Scenes/Gun_Option_Button.gd
+Dialog_Popup.tscn::PackedScene::5354379572515168864::1729699357::0::1::::<><>::
+gun_manager.gd::GDScript::-1::1732554850::0::1::::<>Node<>::
+Gun_Option_Button.gd::GDScript::-1::1732554850::0::1::::<>TextureButton<>::
+Interact Area.tscn::PackedScene::3734870630468083198::1729699357::0::1::::<><>::res://Scripts/Interact Area.gd
+Main.tscn::PackedScene::7917408350775943864::1732554850::0::1::::<><>::res://Scripts/Main.gd<>uid://dk0f80fhwyrqf::::res://Scenes/Player.tscn<>res://Scripts/EnemyInfo.gd<>uid://bthg1kkccswje::::res://Scenes/Interact Area.tscn<>uid://cv08qw6g6jc06::::res://Assets/vecteezy_exclamation-marks-icon-design-element-logo-element_5439438-1.jpg<>uid://ciylufun4eotc::::res://Assets/vecteezy_pixel-speech-bubbles-vector-isolated_30797531.jpg<>res://Scripts/DialogPopup.gd<>uid://yc3fnvug6xwy::::res://Assets/Skeleton_01_White_Idle.png<>res://Scripts/RoomCamera.gd<>uid://b5sc1kya42kup::::res://Assets/Tilesets/Tiles.png<>res://Scripts/Enemy.gd
+Player.tscn::PackedScene::7913123768630001833::1732554850::0::1::::<><>::res://Scripts/Player.gd<>uid://cijx3405lerci::::res://Scenes/Dialog_Popup.tscn
+Start Menu.tscn::PackedScene::3998913462458484702::1729699357::0::1::::<><>::res://Scripts/start_menu.gd<>uid://l8axqp0wq5i5::::res://Assets/resident_evil_3_remake_font_by_snakeyboy_ddovswe.otf
+Test Hud.png::CompressedTexture2D::3523526548183047629::1729698597::1732554874::1::::<><>::
+::res://Scripts/::1732554851
+BattleMode.gd::GDScript::-1::1732554850::0::1::::<>Node<>::
+DialogPopup.gd::GDScript::-1::1725994694::0::1::::<>Sprite2D<>::
+Enemy.gd::GDScript::-1::1732554850::0::1::::Enemy<>Node<>::
+EnemyInfo.gd::GDScript::-1::1732554850::0::1::::<>Enemy<>::
+Interact Area.gd::GDScript::-1::1732554850::0::1::::<>Node<>::
+Main.gd::GDScript::-1::1732554851::0::1::::<>Node2D<>::
+Player.gd::GDScript::-1::1725994694::0::1::::Player<>CharacterBody2D<>::
+RoomCamera.gd::GDScript::-1::1732554851::0::1::::<>Camera2D<>::
+SpawnPoint.gd::GDScript::-1::1732554851::0::1::::<>Node<>::
+start_menu.gd::GDScript::-1::1729616919::0::1::::<>Control<>::
