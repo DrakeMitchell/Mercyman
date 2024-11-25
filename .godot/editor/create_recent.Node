@@ -1,6 +1,7 @@
+Node
+Label
 TextureRect
 TextureButton
-Node
 PopupPanel
 MenuButton
 TileMapLayer
@@ -11,4 +12,3 @@ Panel
 Control
 CanvasLayer
 VBoxContainer
-Label

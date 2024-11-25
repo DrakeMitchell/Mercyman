@@ -32,8 +32,8 @@ func _process(delta):
 #Randomizes the amount of spawned enemies and locations, pretty poor design but functional
 func selectSpawnLocation():
 	var i = 0
-	var t = EnemyInfo.Enemy.Type
-	while(t == "Skeleton" and i < EnemyInfo.Enemy.Amount):
+	var t = EnemyInfo.Type
+	while(t == "Skeleton" and i < EnemyInfo.Amount):
 		i = i + 1
 		var SpawnNum = randi_range(0,2)
 
@@ -50,10 +50,16 @@ func Spawn(n, t):
 		if(n == 0):
 			Point1Used = true
 			point1.get_child(0).show()
+			EnemyInfo.SpawnEnemy()
+			$"../CollisionShape2D/Label".text = "Health: " + str(EnemyInfo.Enemies[0].Health)
 		elif(n == 1):
 			Point2Used = true
 			point2.get_child(0).show()
+			EnemyInfo.SpawnEnemy()
 		elif(n == 2):
 			Point3Used = true
 			point3.get_child(0).show()
+			
+
+
 	

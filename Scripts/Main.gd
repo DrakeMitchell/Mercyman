@@ -70,7 +70,7 @@ func _on_interact_area_interact_hit(Area):
 			interaction = "item"
 			Interacting = true
 	else:
-		EnemyInfo.ripInfo(Area)
+		EnemyInfo.makeEnemy(Area)
 		change_the_scene()
 		
 		#isBattleScene()

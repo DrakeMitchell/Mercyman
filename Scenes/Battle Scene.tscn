@@ -64,6 +64,13 @@ visible = false
 texture = ExtResource("2_kte72")
 script = ExtResource("2_g11a0")
 
+[node name="Label" type="Label" parent="CollisionShape2D"]
+offset_left = -36.0
+offset_top = -81.0
+offset_right = 43.0
+offset_bottom = -58.0
+text = "Health: 00"
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(311, -22)
 shape = SubResource("RectangleShape2D_fi2gj")
@@ -73,6 +80,13 @@ visible = false
 texture = ExtResource("2_kte72")
 script = ExtResource("2_g11a0")
 
+[node name="Label" type="Label" parent="CollisionShape2D2"]
+offset_left = -36.0
+offset_top = -81.0
+offset_right = 43.0
+offset_bottom = -58.0
+text = "Health: 00"
+
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
 position = Vector2(595, -23)
 shape = SubResource("RectangleShape2D_fi2gj")
@@ -81,6 +95,13 @@ shape = SubResource("RectangleShape2D_fi2gj")
 visible = false
 texture = ExtResource("2_kte72")
 script = ExtResource("2_g11a0")
+
+[node name="Label" type="Label" parent="CollisionShape2D3"]
+offset_left = -36.0
+offset_top = -81.0
+offset_right = 43.0
+offset_bottom = -58.0
+text = "Health: 00"
 
 [node name="SpawnControl" type="Node" parent="." node_paths=PackedStringArray("point1", "point2", "point3")]
 script = ExtResource("2_elr2i")

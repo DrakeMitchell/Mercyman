@@ -3,10 +3,13 @@ extends Node
 signal Interact_Hit
 signal Interact_Leave
 
+
+
 @export var Type: String = "Zombie"
 @export var Enemy: bool = false
 @export var Amount: int = 0
 @export var Class: String = "Normal"
+@export var Health: int = 100
 # Called when the node enters the scene tree for the first time.
 
 #

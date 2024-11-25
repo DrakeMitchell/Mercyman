@@ -29,6 +29,8 @@ func _process(delta):
 		
 	if(Input.is_action_just_pressed("click_button")):
 		fire(CurrentPos)
+		
+	updateHealth()
 	#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 #Updates the label upon entering battlemode
@@ -49,16 +51,32 @@ func updateLabel():
 
 
 #Detects the indicators position relative to the buttons and kills the enemy
-func fire(pos):
+func fire(pos) -> bool:
+	if(GunManager.GunAmmo[GunManager.currentEquipped] == 0):
+		return false;
 
 	if(pos.x <= FireButton1.position.x+100 and pos.x >= FireButton1.position.x-100):
-		print_debug("running?")
-		kill(1)
+		hit(1)
 	elif(pos.x <= FireButton2.position.x+100 and pos.x >= FireButton2.position.x-100):
-		kill(2)
+		hit(2)
 	elif(pos.x <= FireButton3.position.x+100 and pos.x >= FireButton3.position.x-100):
-		kill(3)
+		hit(3)
 		
+	GunManager.GunAmmo[GunManager.currentEquipped] -= 1;
+	return true
+		
+		
+		
+func hit(num):
+	print_debug(EnemyInfo.Enemies[0].Health)
+	EnemyInfo.Enemies[0].changeHealth(-50)
+	
+	
+func updateHealth():
+		$"../CollisionShape2D/Label".text = "Health: " + str(EnemyInfo.Enemies[0].Health)
+		#$"../CollisionShape2D2/Label".text = "Health: " + str(EnemyInfo.Enemies[i].Health)
+		#$"../CollisionShape2D3/Label".text = "Health: " + str(EnemyInfo.Enemy.Health)
+	
 
 #Disables the enabled enemies
 func kill(num):

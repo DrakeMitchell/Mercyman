@@ -1,12 +1,15 @@
-res://Scenes/BattleHUD.tscn
+res://Scenes/Player.tscn
 res://Scripts/SpawnPoint.gd
 res://Scripts/BattleMode.gd
-res://Scenes/Player.tscn
 res://Scenes/Main.tscn
 res://Scenes/Interact Area.tscn
 res://Scenes/Dialog_Popup.tscn
 res://Scenes/Battle Scene.tscn
+res://Scenes/BattleHUD.tscn
 res://Scenes/Start Menu.tscn
-res://Scenes/BattleHud.gd
 res://Scenes/gun_manager.gd
-res://Scenes/Gun_Option_Button.gd
+res://Scenes/BattleHud.gd
+res://Scripts/EnemyInfo.gd
+res://Scripts/Enemy.gd
+res://Scripts/Main.gd
+res://Scripts/Interact Area.gd
