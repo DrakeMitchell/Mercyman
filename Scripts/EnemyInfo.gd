@@ -43,7 +43,10 @@ func SpawnEnemy():
 	tempEnemy.setVariables(Type,Class,Health + EnemyNum)
 	Enemies.push_back(tempEnemy)
 	print_debug(Enemies[EnemyNum].Health)
-	EnemyNum += 1
+	
+
+func RemoveEnemy(pos):
+	Enemies.remove_at(pos)
 	
 
 #connects to SendEnemyInfo to store enemy information between scenes

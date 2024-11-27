@@ -94,10 +94,13 @@ func updateHealth():
 func kill(num):
 	if(num == 1):
 		$"../SpawnControl".point1.hide()
+		EnemyInfo.RemoveEnemy(0)
 	elif(num == 2):
 		$"../SpawnControl".point2.hide()
+		EnemyInfo.RemoveEnemy(1)
 	elif(num == 3):
 		$"../SpawnControl".point3.hide()
+		EnemyInfo.RemoveEnemy(2)
 
 		
 	 # Replace with function body.

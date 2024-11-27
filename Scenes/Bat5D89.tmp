@@ -11,9 +11,8 @@
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_v14yu"]
 gradient = SubResource("Gradient_05ciy")
 
-[node name="BattleHud" type="CanvasLayer" node_paths=PackedStringArray("GunButtons")]
+[node name="BattleHud" type="CanvasLayer"]
 script = ExtResource("1_giasc")
-GunButtons = [NodePath("Control/Panel/PopupPanel/HBoxContainer/PistolButton"), NodePath("Control/Panel/PopupPanel/HBoxContainer/ShotgunButton"), NodePath("Control/Panel/PopupPanel/HBoxContainer/RifleButton")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
